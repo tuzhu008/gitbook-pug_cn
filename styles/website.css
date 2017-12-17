@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+h1 {
+    margin-bottom: 100px;
+}
+p {
+    text-indent: 2em;
+}
+book-body ul {
+    padding-left: 4em !important;
+}
+ul p {
+    text-indent: 0;
+}
+blockquote>p:first-child {
+    text-indent: 0;
+}
+blockquote {
+    padding-bottom: 15px !important;
+}
