@@ -9,7 +9,7 @@
 > pug.render('p Hello world!');
 > ```
 
-## 选项
+## 选项 {#options}
 
 所有的 API 方法都可以使用以下的选项：
 
@@ -31,7 +31,7 @@
 
 ## 方法
 
-方法 | 描述 
+方法 | 描述
 :---------|:----------
 [pug.compile(source, ?options)](#pugcompilesource-options) | 把一个 Pug 模板编译成一个可多次使用、可传入不同局部变量渲染的函数。
 [pug.compileFile(path, ?options)](#pugcompilefilepath-options)  | 从文件中读取一个 Pug 模板，并编译成一个可多次使用、可传入不同局部变量渲染的函数。 |
@@ -105,7 +105,7 @@ var html = fn(locals);
 ```
 
 
-### pug.compileClientWithDependenciesTracked(source, ?options) 
+### pug.compileClientWithDependenciesTracked(source, ?options)
 
 与 compileClient 相似，但这个函数返回的是这样一个结构：
 
@@ -118,7 +118,7 @@ var html = fn(locals);
 
 您应该在需要 `dependencies` 来实现一些诸如“监视 Pug 文件变动”的功能的时候，才使用该函数。
 
-### pug.compileFileClient(path, ?options) 
+### pug.compileFileClient(path, ?options)
 
 从文件中读取一个 Pug 模板并编译成一份 JavaScript 代码字符串，它可以直接用在浏览器上而不需要 Pug 的运行时库。
 

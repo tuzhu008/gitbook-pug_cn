@@ -10,6 +10,8 @@
 
 * [迁移到 Pug v2]()
 
+* [致谢和声明](thanks.md)
+
 ### 语法
 
 * [属性](docs/syntax/Attribute.md)

@@ -72,7 +72,7 @@ input(data-json=`
 " />
 ```
 
-## 用引号括起来的属性 
+## 用引号括起来的属性
 
 如果您的属性名称中含有某些奇怪的字符，并且可能会与 JavaScript 语法产生冲突的话，会抛出语法错误。这种属性的例子有 Angular 2 中经常用到的 `[]` 和 `()`。
 
@@ -179,7 +179,7 @@ div(unescaped!="<code>")
 > 未经转义的缓存代码十分危险。您必须正确处理和过滤用户的输入来避免[跨站脚本攻击](https://en.wikipedia.org/wiki/Cross-site_scripting)。
 
 
-## 布尔值属性
+## 布尔值属性 {#boolean-attributes}
 
 在 Pug 中，布尔值属性是经过映射的，这样布尔值（`true` 和 `false`）就能接受了。当没有指定值的时候，默认是 `true`。
 
@@ -303,7 +303,7 @@ a.button
 <div class="content"></div>
 ```
 
-## ID 的字面值 
+## ID 的字面值
 
 ID 可以使用 `#idname` 语法来定义：
 
@@ -357,6 +357,6 @@ div#foo(data-bar="foo")&attributes(attributes)
 <div class="baz" id="foo" data-bar="foo"></div>
 ```
 
-> **[danger] 危险** 
+> **[danger] 危险**
 >
 > 使用 `&attributes` 赋值的属性并不会经过自动转义过程。您必须正确处理和过滤用户的输入来避免跨站脚本攻击(XSS)。 但是如果您是从一个 mixin 调用中使用 `attributes` 的话，这个过程就是自动的。

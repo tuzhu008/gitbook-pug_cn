@@ -1,14 +1,12 @@
-<a href="https://pugjs.org"><img src="https://cdn.rawgit.com/pugjs/pug-logo/eec436cee8fd9d1726d7839cbe99d1f694692c0c/SVG/pug-final-logo-_-colour-128.svg" height="200" align="right"></a>
+<a href="https://pugjs.org"><img src="assets/images/logo.svg" height="200" align="right"></a>
 # Pug
 
-Full documentation is at [pugjs.org](https://pugjs.org/)
+完整的文档在 [pugjs.org](https://pugjs.org/)
 
- Pug is a high-performance template engine heavily influenced by [Haml](http://haml.info/)
- and implemented with JavaScript for [Node.js](http://nodejs.org) and browsers. For bug reports,
- feature requests and questions, [open an issue](https://github.com/pugjs/pug/issues/new).
- For discussion join the [chat room](https://gitter.im/pugjs/pug).
 
- You can test drive Pug online [here](https://pugjs.org/).
+ Pug是一个高性能的模板引擎，深受 [Haml](http://haml.info/) 的影响，并为 [Node.js](http://nodejs.org) 实现了浏览器 JavaScript。对于bug报告、特性请求和问题，请[打开一个问题](https://github.com/pugjs/pug/issues/new)。讨论请加入[聊天室](https://gitter.im/pugjs/pug)。
+
+ 你可以在[这里](https://pugjs.org/)试驾 Pug。
 
  [![Build Status](https://img.shields.io/travis/pugjs/pug/master.svg?style=flat)](https://travis-ci.org/pugjs/pug)
  [![Coverage Status](https://img.shields.io/coveralls/pugjs/pug/master.svg?style=flat)](https://coveralls.io/r/pugjs/pug?branch=master)
@@ -19,19 +17,19 @@ Full documentation is at [pugjs.org](https://pugjs.org/)
 [![OpenCollective](https://opencollective.com/pug/backers/badge.svg)](#backers) 
 [![OpenCollective](https://opencollective.com/pug/sponsors/badge.svg)](#sponsors)
 
-## Rename from "Jade"
+## 重命名自 "Jade"
 
-This project was formerly known as "Jade." However, it has been revealed to us that "Jade" is a registered trademark, and as a result, a rename is needed. After some discussion among the maintainers, **"Pug"** has been chosen as the new name for this project. The next major version will carry "pug" as the package name.
+这个项目以前被称为“Jade”。然而，它已经向我们透露，“Jade”是一个注册商标，因此需要重命名。在维护人员之间进行了一些讨论之后，**“Pug”** 被选为这个项目的新名称。下一个主要版本将把“pug” 作为包名。
 
-If your package or app currently uses `jade`, don't worry: we have secured permissions to continue to occupy that package name, although all new versions will be released under `pug`.
+如果您的包或应用程序目前使用的是 `jade`，请不要担心:我们已经获得了继续使用这个包名的权限，尽管所有的新版本都将在 `pug` 下发布。
 
-Before the renaming, we had already begun working on an incompatible Jade 2.0.0. We have then made it so that this new major version bump will coincide with the rename to Pug. Therefore, upgrading from Jade to Pug will be the same process as upgrading any other package with a major version bump. Currently, Pug 2.0.0 is still in beta stage, and there are several syntactic differences we have deprecated and removed. Such differences are documented at [#2305](https://github.com/pugjs/pug/issues/2305).
+在重命名之前，我们已经开始研究一个不兼容的 Jade 2.0.0。我们这样做了，所以这个新的主要版本 bump 将与重命名为 Pug 一致。因此，从 Jade 升级到 Pug，将与升级任何其他带有主要版本的包的过程一样。目前，Pug 2.0.0 还处于测试阶段，我们已经弃用了一些语法差异。这些差异在 [#2305](https://github.com/pugjs/pug/issues/2305) 被记录下来。
 
-The website and documentation for Pug are still being updated, but if you are new to Pug, you should get started with the new syntax and install the Pug package on npm.
+Pug的网站和文档还在更新中，但是如果你是 Pug 的新手，你应该开始使用新的语法，并在 npm 上安装 Pug 包。
 
-## Installation
+## 安装
 
-### Package
+### 包
 
 via npm:
 
@@ -39,23 +37,23 @@ via npm:
 $ npm install pug
 ```
 
-### Command Line
+### 命令行
 
-After installing the latest version of [Node.js](http://nodejs.org/), install with:
+在安装了最新版本的 [Node.js](http://nodejs.org/) 后，使用以下指令安装命令行接口：
 
 ```bash
 $ npm install pug-cli -g
 ```
 
-and run with
+运行：
 
 ```bash
 $ pug --help
 ```
 
-## Syntax
+## 语法
 
-Pug is a clean, whitespace sensitive syntax for writing html.  Here is a simple example:
+Pug是一种干净的、空白敏感的语法，用于编写 html。这里有一个简单的例子:
 
 ```pug
 doctype html
@@ -76,7 +74,7 @@ html(lang="en")
         strong focus on performance and powerful features.
 ```
 
-becomes
+对应的 HTML：
 
 
 ```html
@@ -100,49 +98,51 @@ becomes
 
 ## API
 
-For full API, see [pugjs.org/api/reference.html](https://pugjs.org/api/reference.html)
+完整的 API，请参见 [API英文文档](https://pugjs.org/api/reference.html)。
+。也可以查看  [Pug API 中文文档](https://tuzhu008.github.io/gitbook-pug_cn/)。
 
 ```js
 var pug = require('pug');
 
-// compile
+// 编译
 var fn = pug.compile('string of pug', options);
 var html = fn(locals);
 
-// render
+// 渲染
 var html = pug.render('string of pug', merge(options, locals));
 
-// renderFile
+// 渲染文件
 var html = pug.renderFile('filename.pug', merge(options, locals));
 ```
 
-### Options
+### 选项
 
- - `filename`  Used in exceptions, and required when using includes
- - `compileDebug`  When `false` no debug instrumentation is compiled
- - `pretty`    Add pretty-indentation whitespace to output _(false by default)_
+ - `filename`  用于异常信息以及（使用相对路径的）包含（include）和扩展（extends）操作。
+ - `compileDebug`  当设置为 `false` 时，源代码不会被包含在编译出来的模板函数中，
+ - `pretty`    在输出中添加空白缩进 _(默认为：`false`)_
 
-## Browser Support
+## 浏览器支持
 
- The latest version of pug can be download for the browser in standalone form from [here](https://pugjs.org/js/pug.js).  It only supports the very latest browsers though, and is a large file.  It is recommended that you pre-compile your pug templates to JavaScript.
+最新版本的 pug 可以从[这里](https://pugjs.org/js/pug.js)下载到浏览器中。它只支持最新的浏览器，而且是一个大文件。建议您预编译您的 pug 模板到JavaScript。
 
- To compile a template for use on the client using the command line, do:
+要在客户端上使用命令行编译模板，这样做：
+
 
 ```bash
 $ pug --client --no-debug filename.pug
 ```
 
-which will produce `filename.js` containing the compiled template.
+这将生成一个包含被编译模板的 `filename.js` 文件。
 
-## Additional Resources
+## 额外的资源
 
-Tutorials:
+教程:
 
   - cssdeck interactive [Pug syntax tutorial](http://cssdeck.com/labs/learning-the-jade-templating-engine-syntax)
   - cssdeck interactive [Pug logic tutorial](http://cssdeck.com/labs/jade-templating-tutorial-codecast-part-2)
   - [Pug について。](https://gist.github.com/japboy/5402844) (A Japanese Tutorial)
 
-Implementations in other languages:
+在其他语言中实现:
 
   - [Larpug - Pug for Laravel](https://github.com/acidjazz/larpug)
   - [php](https://github.com/pug-php/pug)
@@ -152,7 +152,7 @@ Implementations in other languages:
   - [java](https://github.com/neuland/jade4j)
   - [C# ASP.NET Core](https://github.com/AspNetMonsters/pugzor)
 
-Other:
+其他:
 
   - [Emacs Mode](https://github.com/brianc/jade-mode)
   - [Vim Syntax](https://github.com/digitaltoad/vim-pug)
@@ -166,8 +166,8 @@ Other:
   - [cache-pug-templates](https://github.com/ladjs/cache-pug-templates) Cache Pug templates for [Lad](https://github.com/ladjs/lad)/[Koa](https://github.com/koajs/koa)/[Express](https://github.com/expressjs/express)/[Connect](https://github.com/senchalabs/connect) with [Redis](https://redis.io/)
 
 
-## Backers
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/pug#backer)]
+## 支持者
+每月的捐款支持我们，并帮助我们继续我们的活动。 [称为支持者](https://opencollective.com/pug#backer)]
 
 <a href="https://opencollective.com/pug/backer/0/website" target="_blank"><img src="https://opencollective.com/pug/backer/0/avatar.svg"></a>
 <a href="https://opencollective.com/pug/backer/1/website" target="_blank"><img src="https://opencollective.com/pug/backer/1/avatar.svg"></a>
@@ -200,8 +200,10 @@ Support us with a monthly donation and help us continue our activities. [[Become
 <a href="https://opencollective.com/pug/backer/28/website" target="_blank"><img src="https://opencollective.com/pug/backer/28/avatar.svg"></a>
 <a href="https://opencollective.com/pug/backer/29/website" target="_blank"><img src="https://opencollective.com/pug/backer/29/avatar.svg"></a>
 
-## Sponsors
-Become a sponsor and get your logo on our README on Github with a link to your site. [[Become a sponsor](https://opencollective.com/pug#sponsor)]
+## 赞助商
+
+成为一个赞助商，并在 Github 的 README 中看到你的标志，链接到你的网站上。
+[[称为赞助商](https://opencollective.com/pug#sponsor)]
 
 <a href="https://opencollective.com/pug/sponsor/0/website" target="_blank"><img src="https://opencollective.com/pug/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/pug/sponsor/1/website" target="_blank"><img src="https://opencollective.com/pug/sponsor/1/avatar.svg"></a>
