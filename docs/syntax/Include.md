@@ -2,7 +2,7 @@
 
 包含（include）功能允许您把另外的文件内容插入进来。
 
-```pug
+```jade
 //- includes/head.pug
 head
   title 我的网站
@@ -10,13 +10,13 @@ head
   script(src='/javascripts/app.js')
 ```
 
-```pug
+```jade
 //- includes/foot.pug
 footer#footer
   p Copyright (c) foobar
 ```
 
-```pug
+```jade
 //- index.pug
 doctype html
 html
@@ -71,7 +71,7 @@ h1 {
 console.log('真了不起！');
 ```
 
-```pug
+```jade
 //- index.pug
 doctype html
 html
@@ -124,7 +124,7 @@ html
 这是一篇用 Markdown 写的文章。
 ```
 
-```pug
+```jade
 //- index.pug
 doctype html
 html

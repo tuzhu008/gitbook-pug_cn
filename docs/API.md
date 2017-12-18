@@ -131,7 +131,7 @@ var html = fn(locals);
 
 首先，写下我们的模板……
 
-```pug
+```jade
 h1 这是一个 Pug 模板
 h2 作者：#{author}
 ```

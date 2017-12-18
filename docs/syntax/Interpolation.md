@@ -6,7 +6,7 @@ Pug 提供了若干种操作符以满足您不同的嵌入需求。
 
 观察下面例子中的局部变量 `title`、`author` 和 `theGreat` 是如何被嵌入模板的。
 
-```pug
+```jade
 - var title = "On Dogs: Man's Best Friend";
 - var author = "enlore";
 - var theGreat = "<span>转义!</span>";
@@ -28,7 +28,7 @@ p 这是安全的：#{theGreat}
 
 `#{` 和 `}`里面可以是任何的正确的 JavaScript 表达式，您可以自由发挥。
 
-```pug
+```jade
 - var msg = "not my inside voice";
 p This is #{msg.toUpperCase()}
 ```
@@ -41,7 +41,7 @@ p This is #{msg.toUpperCase()}
 
 Pug 足够聪明来分辨到底哪里才是嵌入表达式的结束，所以您不用担心表达式中有 `}`，也不需要额外的转义。
 
-```pug
+```jade
 p 不要转义 #{'}'}！
 ```
 
@@ -53,7 +53,7 @@ p 不要转义 #{'}'}！
 
 如果您需要表示一个 `#{` 文本，您可以转义它，也可以用嵌入功能来生成（可以，这很元编程）。
 
-```pug
+```jade
 p Escaping works with \#{interpolation}
 p Interpolation works with #{'#{interpolation}'} too!
 ```
@@ -69,7 +69,7 @@ p Interpolation works with #{'#{interpolation}'} too!
 
 您当然也 _并不是必须_ 要用安全的转义来构造内容。您可以嵌入没有转义的文本进入模板中。
 
-```pug
+```jade
 - var riskyBusiness = "<em>我希望通过外籍教师 Peter 找一位英语笔友。</em>";
 .quote
   p 李华：!{riskyBusiness}
@@ -92,7 +92,7 @@ p Interpolation works with #{'#{interpolation}'} too!
 
 嵌入功能不仅可以嵌入 JavaScript 表达式的值，也可以嵌入用 Pug 书写的标签。它看起来应该像这样：
 
-```pug
+```jade
 p.
   这是一个很长很长而且还很无聊的段落，还没有结束，是的，非常非常地长。
   突然出现了一个 #[strong 充满力量感的单词]，这确实让人难以 #[em 忽视]。
@@ -111,7 +111,7 @@ p.
 
 标签嵌入功能，在需要嵌入的位置上前后的空格非常关键的时候，就变得非常有用了。因为 Pug 默认会去除一个标签前后的所有空格。请观察下面一个例子：
 
-```pug
+```jade
 p
   | 如果我不用嵌入功能来书写，一些标签比如
   strong strong

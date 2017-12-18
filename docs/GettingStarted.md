@@ -14,7 +14,7 @@ Pug 的渲染操作一般来说是相当简单的。`pug.compile()` 会把 Pug �
 
 这个编译出来的函数可以被重复使用，也可以传入不同的数据。
 
-```pug
+```jade
 //- template.pug
 p #{name}的 Pug 代码！
 ```

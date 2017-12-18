@@ -2,7 +2,7 @@
 
 混入是一种允许您在 Pug 中重复使用一整个代码块的方法。
 
-```pug
+```jade
 //- 定义
 mixin list
   ul
@@ -31,7 +31,7 @@ mixin list
 
 它们会被编译成函数形式，您可以传递一些参数：
 
-```pug
+```jade
 mixin pet(name)
   li.pet= name
 ul
@@ -54,7 +54,7 @@ ul
 
 混入也可以把一整个代码块像内容一样传递进来：
 
-```pug
+```jade
 mixin article(title)
   .article
     .article-wrapper
@@ -93,7 +93,7 @@ mixin article(title)
 
 混入也可以隐式地，从“标签属性”得到一个参数 `attributes`：
 
-```pug
+```jade
 mixin link(href, name)
   //- attributes == {class: "btn"}
   a(class!=attributes.class href=href)= name
@@ -113,7 +113,7 @@ mixin link(href, name)
 
 您也可以直接用 `&attributes` 方法来传递 `attributes` 参数：
 
-```pug
+```jade
 mixin link(href, name)
   a(href=href)&attributes(attributes)= name
 
@@ -134,7 +134,7 @@ mixin link(href, name)
 
 您可以用剩余参数（rest arguments）语法来表示参数列表最后传入若干个长度不定的参数，比如：
 
-```pug
+```jade
 mixin list(id, ...items)
   ul(id=id)
     each item in items

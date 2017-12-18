@@ -2,7 +2,7 @@
 
 `case` 是 JavaScript 的 `switch` 指令的缩写，并且它接受如下的形式：
 
-```pug
+```jade
 - var friends = 10
 case friends
   when 0
@@ -23,7 +23,7 @@ case friends
 
 您可以像 JavaScript 中的 `switch` 语句那样使用传递（fall through）。
 
-```pug
+```jade
 - var friends = 0
 case friends
   when 0
@@ -43,7 +43,7 @@ case friends
 
 在某些情况下，如果您不想输出任何东西的话，您可以明确地加上一个原生的 `break` 语句：
 
-```pug
+```jade
 - var friends = 0
 case friends
   when 0
@@ -64,7 +64,7 @@ case friends
 
 您也可以使用块展开的语法：
 
-```pug
+```jade
 - var friends = 1
 case friends
   when 0: p 您没有朋友

@@ -55,7 +55,7 @@ $ pug --help
 
 Pug是一种干净的、空白敏感的语法，用于编写 html。这里有一个简单的例子:
 
-```pug
+```jade
 doctype html
 html(lang="en")
   head

@@ -13,7 +13,7 @@ $ npm install --save jstransformer-markdown-it
 
 现在可以渲染下面这个模板了。
 
-```pug
+```jade
 :markdown-it(linkify langPrefix='highlight-')
   # Markdown
 
@@ -54,7 +54,7 @@ script
 
 如果过滤器的内容很短，我们甚至可以像一个 HTML 标签一样去使用它：
 
-```pug
+```jade
 p
   :markdown-it(inline) **加粗文字**
 
@@ -78,7 +78,7 @@ p.
 
 在下面的例子里，内容将首先被 `babel` 过滤器处理，然后是 `cdata-js`。
 
-```pug
+```jade
 script
   :cdata-js:babel(presets=['es2015'])
     const myFunc = () => `这是一行在 CD${'ATA'} 里的 ECMAScript 2015 代码`;
@@ -104,7 +104,7 @@ options.filters = {
 };
 ```
 
-```pug
+```jade
 p
   :my-own-filter(addStart addEnd)
     过滤

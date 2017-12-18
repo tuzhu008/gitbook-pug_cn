@@ -1,7 +1,7 @@
 # Doctype
 
 
-```pug
+```jade
 doctype html
 ```
 
@@ -65,7 +65,7 @@ doctype html
 
 您也可以自定义一个 doctype 字面值：
 
-```pug
+```jade
 doctype html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
 ```
 
@@ -81,7 +81,7 @@ Doctype 会影响 Pug 的编译结果。比如自闭合的标签是以 `/>` 还�
 
 如果因为某些原因，不能在模板里使用 doctype 关键字（比如需要渲染的是 HTML 的一个片段），但您依然需要指定 doctype 的时候，您就可以通过 [doctype 选项](//docs/API.md#options)来设置了。
 
-```pug
+```jade
 var pug = require('./');
 
 var source = 'img(src="foo.png")';
