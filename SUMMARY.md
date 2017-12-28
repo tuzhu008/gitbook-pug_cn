@@ -8,6 +8,8 @@
 
 * [API 参考文档](docs/API.md)
 
+* [常见问题](docs/faq.md)
+
 * [迁移到 Pug v2]()
 
 * [致谢和声明](thanks.md)
